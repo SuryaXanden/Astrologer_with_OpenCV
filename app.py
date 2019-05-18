@@ -222,6 +222,7 @@ try:
             if ip == 0:
                 read_face()
                 print("\n"*50)
+                speak("Enter your name")
                 name = input( "Enter your name: " )
                 print("\n"*50)
                 name = re.sub( "[^a-zA-Z ]", "", name )

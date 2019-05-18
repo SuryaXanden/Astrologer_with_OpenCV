@@ -3,7 +3,6 @@ from glob import glob
 from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-from time import sleep
 import numpy as np
 
 engine = pyttsx3.init()
@@ -229,10 +228,10 @@ try:
                 if name:
                     get_predictions = predict(good,bad)
                     print("Hi {}\n".format(name))
-                    speak("Hi, {}\n".format(name))
+                    speak("Hi, {}".format(name))
                             
                     print("Predictions about you:\n")
-                    speak("Predictions about you:\n")
+                    speak("Predictions about you")
                     for i in get_predictions:
                         print(i)
                         speak(i)
@@ -256,7 +255,6 @@ try:
                     plt.figure(num = char)
                     imgplot = plt.imshow(img)
                     plt.show()
-                    sleep(1)
                     speak("Press a key to continue")
                     x = input("Press a key to continue...")
                 else:
